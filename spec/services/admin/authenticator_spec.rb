@@ -17,7 +17,7 @@ describe Admin::Authenticator do
             expect(Admin::Authenticator.new(m).authenticate(nil)).to be_falsey
         end
 
-        example "停止フラグ立っていればtureを返す" do
+        example "停止フラグ立っていてもtureを返す" do
             m = build(:administrator, suspended: true)
             expect(Admin::Authenticator.new(m).authenticate("pw")).to be_truthy
         end
