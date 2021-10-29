@@ -18,7 +18,7 @@ class Admin::SessionsController < Admin::Base
             if administrator.suspended?
                 flash.now.alert = "アカウントが停止されています。"
                 render action: "new"
-            else Admin::Authenticator.new(administrator).authenticate(@form.password)
+            else
                 session[:administrator_id] = administrator.id
                 flash.notice = "ログインしました。"
                 redirect_to :admin_root
