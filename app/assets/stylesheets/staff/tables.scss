@@ -9,7 +9,7 @@ div.table-wrapper {
     }
     table {
         margin: $moderate auto 0;
-        border: solid $moderate $very_dark_magenta;
+        border: solid $moderate $very_dark_cyan;
         tr {
             th {
                 background-color: $dark_gray;
@@ -39,6 +39,16 @@ div.table-wrapper {
         }
         tr:nth-child(odd) {
             background-color: $light_gray;
+        }
+    }
+    table.attributes {
+        width: 100%;
+        th {
+            padding-right: $moderate;
+            width: 200px;
+        }
+        td {
+            background-color: $very_light_gray;
         }
     }
 }
