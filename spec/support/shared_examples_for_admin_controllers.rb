@@ -24,7 +24,7 @@ end
 shared_examples "a protected singular admin controller" do |controller|
     let(:args) do
         {
-            hodt: Rails.application.config.baukis2[:admin][:host],
+            host: Rails.application.config.baukis2[:admin][:host],
             controller: controller,
         }
     end
