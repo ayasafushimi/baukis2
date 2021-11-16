@@ -1,7 +1,9 @@
 class ModelPresenter
+    include HtmlBuilder
+
     attr_reader :object, :view_context
-    # rawメソッドをview_contextに委譲する。
-    delegate :raw, to: :view_context
+    # メソッドをview_contextに委譲する。
+    delegate :raw, :link_to, to: :view_context
 
     def initialize(object, view_context)
         @object = object
