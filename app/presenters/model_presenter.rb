@@ -1,4 +1,6 @@
 class ModelPresenter
+    # モデルを対象としたプレゼンテーター
+
     include HtmlBuilder
 
     attr_reader :object, :view_context
